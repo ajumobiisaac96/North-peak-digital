@@ -9,6 +9,7 @@
   --line: #E7E4DD;
   --accent: #FF6A39;
   --accent-dark: #E5511F;
+  --accent-text: #C2410C;
   --dark: #1B1B17;
 
   --radius-lg: 28px;
@@ -87,7 +88,7 @@ h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); }
 h3 { font-size: 1.15rem; }
 
 .eyebrow {
-  color: var(--accent-dark);
+  color: var(--accent-text);
   font-weight: 700;
   font-size: 0.8rem;
   text-transform: uppercase;
@@ -128,7 +129,7 @@ section { padding-block: clamp(3rem, 7vw, 6rem); }
 
 .btn-primary {
   background: var(--accent);
-  color: #fff;
+  color: var(--ink);
   box-shadow: var(--shadow-soft);
 }
 .btn-primary:hover { background: var(--accent-dark); }
@@ -188,7 +189,7 @@ section { padding-block: clamp(3rem, 7vw, 6rem); }
   color: #fff;
   font-weight: 800;
 }
-.logo-thin { font-weight: 400; color: var(--muted); margin-left: 0.15rem; }
+.logo-thin { font-weight: 400; color: var(--muted); }
 
 .primary-nav ul {
   display: flex;
@@ -421,7 +422,7 @@ section { padding-block: clamp(3rem, 7vw, 6rem); }
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--accent-dark);
+  color: var(--accent-text);
   background: #FBEEE7;
   padding: 0.3rem 0.65rem;
   border-radius: var(--radius-pill);
@@ -549,7 +550,7 @@ section { padding-block: clamp(3rem, 7vw, 6rem); }
   top: -14px;
   right: 2rem;
   background: var(--accent);
-  color: #fff;
+  color: var(--ink);
   font-size: 0.72rem;
   font-weight: 700;
   padding: 0.35rem 0.8rem;
@@ -697,6 +698,7 @@ textarea.invalid { border-color: #C4372B; }
 }
 .footer-brand p { margin-top: 1rem; font-size: 0.9rem; }
 .footer-brand .logo { color: #fff; }
+.footer-brand .logo-thin { color: #C9C8C0; }
 .footer-col h3 {
   color: #fff;
   font-size: 0.85rem;
