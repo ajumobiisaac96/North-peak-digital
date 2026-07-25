@@ -32,12 +32,18 @@ No build step. Either:
 
 ## Design decisions
 
-1. **Real photography via Picsum (Unsplash-sourced, free-to-use) and
-   RandomUser.me for avatar circles**, styled inside hand-built CSS/SVG
-   frames (the browser-window chrome, metric-pill overlays, avatar stack)
-   rather than a raster screenshot of an actual product. Only the hero
-   image loads eager; everything else is `loading="lazy"` with explicit
-   `width`/`height` so layout doesn't shift while images arrive.
+1. **Custom SVG illustrations instead of stock photography**, for every
+   image except the small team-avatar circles (RandomUser.me). Each result
+   card gets a hand-drawn icon tied to that client's actual industry — a
+   skincare bottle for Solstice Skincare, a house for Hearth & Home, a
+   dumbbell for Vantage Fitness, a coffee cup for Coastal Coffee — on a
+   topic-matched gradient, so nothing on the page is decorative-but-random.
+   I tried real photos first (Picsum, then keyword-searched LoremFlickr)
+   and rejected both: Picsum's photos were unrelated to their sections, and
+   LoremFlickr's keyword matching was unreliable enough to return an
+   abstract logo graphic for a "fitness,gym" query. Illustrations gave me
+   full control over relevance, and they're vector, so they're crisp at
+   any size and add near-zero page weight.
 2. **System font stack, no web font.** Avoids a render-blocking font
    request entirely; the trade-off (less distinctive type) was worth it
    for load speed on a task explicitly graded on performance.
@@ -66,6 +72,10 @@ before they shipped:
 I used Claude to scaffold the initial HTML/CSS/JS from a reference layout
 I chose myself (a template screenshot), and to set up the automated
 browser testing (Puppeteer) that caught the two responsive-layout bugs
+described above. When the first pass of imagery turned out to be
+generic stock photos with no connection to the content, I redirected it
+twice — first to try keyword-matched photos, then, once those proved
+unreliable, to replace them with the hand-drawn SVG icon per case study
 described above. I wrote the actual copy, chose the service list and
 pricing tiers to match a Shopify/web agency positioning, picked the
 colour and type system, and reviewed every section against the brief's

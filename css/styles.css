@@ -280,16 +280,22 @@ section { padding-block: clamp(3rem, 7vw, 6rem); }
   background: var(--line);
   margin-bottom: 0.9rem;
 }
+.skel-line.w-60 { width: 60%; height: 20px; background: var(--ink); opacity: 0.85; }
 .skel-line.w-40 { width: 40%; }
-
-.browser-shot {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 640 / 380;
-  border-radius: var(--radius-sm);
-  object-fit: cover;
-  display: block;
+.skel-line.w-80 { width: 80%; margin-top: 1.2rem; margin-bottom: 0; }
+.skel-blocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.7rem;
+  margin-block: 1rem;
 }
+.skel-block {
+  height: 70px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, #FFE1D2, #FFB088);
+}
+.skel-block:nth-child(2) { background: linear-gradient(135deg, #FFD3BC, var(--accent)); }
+.skel-block.tall { background: linear-gradient(135deg, #2B2B25, var(--dark)); }
 
 .floating-chip {
   position: absolute;
@@ -449,20 +455,25 @@ section { padding-block: clamp(3rem, 7vw, 6rem); }
   position: relative;
   overflow: hidden;
 }
-.result-visual img {
+.grad-skincare { background: linear-gradient(135deg, #FFC9B8, #FF7A52); }
+.grad-home { background: linear-gradient(135deg, #C98A5E, #6B4530); }
+.grad-fitness { background: linear-gradient(135deg, #2B2B25, var(--accent-dark)); }
+.grad-coffee { background: linear-gradient(135deg, #6B4A32, #2B1D14); }
+
+.result-icon {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  top: 50%;
+  right: 1.1rem;
+  transform: translateY(-50%);
   z-index: 0;
+  opacity: 0.95;
 }
 .result-visual::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(0deg, rgba(20,20,15,0.55) 0%, rgba(20,20,15,0.05) 55%);
+  background: radial-gradient(circle at 15% 15%, rgba(255,255,255,0.22), transparent 55%);
 }
 .metric-pill {
   position: relative;
@@ -494,21 +505,12 @@ section { padding-block: clamp(3rem, 7vw, 6rem); }
   overflow: hidden;
   isolation: isolate;
 }
-.cta-banner-bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.3;
-  z-index: 0;
-}
 .cta-banner-inner::before {
   content: "";
   position: absolute;
   inset: 0;
-  z-index: 1;
-  background: linear-gradient(100deg, rgba(27,27,23,0.95) 30%, rgba(27,27,23,0.55) 100%);
+  z-index: 0;
+  background: radial-gradient(circle at 85% 30%, rgba(255,106,57,0.25), transparent 60%);
 }
 .cta-banner-inner > div { position: relative; z-index: 2; }
 .cta-banner-inner h2 { color: #fff; font-size: clamp(1.4rem, 2.5vw, 1.9rem); }
