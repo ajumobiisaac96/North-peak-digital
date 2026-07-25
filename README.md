@@ -32,10 +32,12 @@ No build step. Either:
 
 ## Design decisions
 
-1. **CSS/SVG mockup graphics instead of stock photos.** The hero "browser
-   window" and results-section thumbnails are drawn with CSS gradients and
-   inline SVG rather than raster images, so the page ships with zero image
-   requests — good for both originality and Lighthouse performance.
+1. **Real photography via Picsum (Unsplash-sourced, free-to-use) and
+   RandomUser.me for avatar circles**, styled inside hand-built CSS/SVG
+   frames (the browser-window chrome, metric-pill overlays, avatar stack)
+   rather than a raster screenshot of an actual product. Only the hero
+   image loads eager; everything else is `loading="lazy"` with explicit
+   `width`/`height` so layout doesn't shift while images arrive.
 2. **System font stack, no web font.** Avoids a render-blocking font
    request entirely; the trade-off (less distinctive type) was worth it
    for load speed on a task explicitly graded on performance.
