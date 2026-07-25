@@ -85,6 +85,18 @@ pricing tiers to match a Shopify/web agency positioning, picked the
 colour and type system, and reviewed every section against the brief's
 requirements myself before treating it as done.
 
+Later, I asked for a redesign pass modeled on a site I liked — which turned
+out to be digitalheroesco.com, Digital Heroes' own live site. Claude flagged
+that copying the reviewer's own homepage structure was a bad idea (it cuts
+against "make it unmistakably yours," and it's the kind of thing the actual
+reviewers would recognize immediately), and proposed pulling out the
+underlying design *language* instead — punchier problem-led hero copy,
+numbered section labels, bolder stat callouts, metric-led case study cards —
+applied to NorthPeak's own original one-page structure rather than copying
+Digital Heroes' multi-thousand-pixel marketing site wholesale. I agreed with
+that read and went with it; the current hero copy, section numbering, and
+result-card layout are the result.
+
 ---
 
 Built for Digital Heroes Training Task
