@@ -58,11 +58,22 @@ was mainly about closing the accessibility gap.
 
 ## Result
 
-**Performance 95-96, Accessibility 100** (0 failing audits), confirmed on
-a clean run after clearing out orphaned Chrome processes from earlier CLI
-runs — one intermediate reading briefly showed Performance 78 purely from
-local CPU contention during testing, not a real regression; re-running on
-an idle machine reproduced 95-96 consistently.
+**Live URL (https://north-peak-digital-five.vercel.app/): Performance 98,
+Accessibility 100** (0 failing audits) — this is the authoritative number,
+tested against the real production deployment, not a local copy.
+`lighthouse-scores.png` and `lighthouse-report.html` in this folder are
+from that live run.
+
+Getting there took a couple of retries: local-server runs during
+development read 95-99 depending on machine load (one reading briefly
+showed Performance 78 purely from orphaned Chrome processes left over from
+earlier CLI runs competing for CPU — not a real regression). The first
+live-URL run also read Performance 78, with Total Blocking Time spiking to
+650ms; a clean retry a minute later read 650ms → 0ms and Performance 97,
+and the final run read 98. That's consistent with Lighthouse's simulated
+throttling being sensitive to transient network/TLS conditions on a
+single request, not a real, reproducible site problem — worth knowing if
+you see a similar one-off low score when you run this yourself.
 
 ## What I'd do next with another day
 

@@ -5,8 +5,8 @@ built for the Digital Heroes Web Development qualification task (Role 05).
 
 **Live site:** https://north-peak-digital-five.vercel.app/
 
-**Task B (Lighthouse):** [docs/CHANGELOG.md](docs/CHANGELOG.md) — Performance
-95-96, Accessibility 100. Screenshot: [docs/lighthouse-scores.png](docs/lighthouse-scores.png),
+**Task B (Lighthouse, live URL):** [docs/CHANGELOG.md](docs/CHANGELOG.md) —
+Performance 98, Accessibility 100. Screenshot: [docs/lighthouse-scores.png](docs/lighthouse-scores.png),
 full report: [docs/lighthouse-report.html](docs/lighthouse-report.html).
 
 ## Stack
